@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kung Fu Panda - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #e4d9d9db;
+            color: #0c0202;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            background-color: #2c3e50;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .nav-container {
+            display:flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            color: oklab(88.874% -0.00776 0.00318);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            background-color: #e9f0eb;
+            color: #3a6548;
+        }
+        
+        header {
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .panda-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .header-text {
+            flex: 1;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #222;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: #222;
+            font-weight: 600;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #4a7c59;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #3a6548;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+        
+        .project {
+            margin-bottom: 25px;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .project-description {
+            color: #555;
+            margin-left: 15px;
+        }
+        
+        .contact-info {
+            margin-top: 10px;
+        }
+        
+        .contact-item {
+            margin-bottom: 8px;
+        }
+        
+        .social-links {
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: #4a7c59;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+        
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            background: #e9f0eb;
+            color: #4a7c59;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    
+    <header id="home">
+        <div class="header-content">
+            <img src="https://i.pinimg.com/1200x/09/e0/b0/09e0b0aed715ee5f3c1d03c7ca08d880.jpg" alt="Kung Fu Panda" class="panda-image">
+            <div class="header-text">
+                <h1>Kung Fu Panda</h1>
+                <p class="subtitle">Hi, I'm Po</p>
+                <p class="subtitle">A Dragon Warrior, Graduated at Jade Palace under Master Shifu</p>
+                <a href="#projects" class="btn">View the works</a>
+            </div>
+        </div>
+    </header>
+    
+    <hr>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <div class="project">
+            <div class="project-title">Company Management System</div>
+            <div class="project-description">
+                <p>Used Django for tracking and HTML, CSS and JS For front end</p>
+                <div>
+                    <span class="tech-badge">Django</span>
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Skin Cancer Protection</div>
+            <div class="project-description">
+                <p>Used Extract Space for UI</p>
+                <div>
+                    <span class="tech-badge">Extract Space</span>
+                    <span class="tech-badge">UI Design</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Food Delivery App</div>
+            <div class="project-description">
+                <p>Used Swift for App development for iOS Devices</p>
+                <div>
+                    <span class="tech-badge">Swift</span>
+                    <span class="tech-badge">iOS</span>
+                    <span class="tech-badge">Mobile Development</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>Email:</strong> panda@kungfu.panda.com
+            </div>
+            <div class="contact-item">
+                <strong>LinkedIn:</strong> <a href="#">Click here for linked</a>
+            </div>
+            <div class="contact-item">
+                <strong>Instagram:</strong> <a href="#">India Profile</a>
+            </div>
+            <div class="contact-item">
+                <strong>Kung Fu Photos:</strong> <a href="">View Gallery</a>
+            </div>
+        </div>
+        
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+    </section>
+    
+    <footer style="margin-top: 50px; text-align: center; color: #150404; font-size: 0.9rem;">
+        <p>&copy; 2027 Kung Fu Panda. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

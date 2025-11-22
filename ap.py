@@ -1,0 +1,6 @@
+p=int(input("enter the amount"))
+r=float(input("enter the ineterst"))
+n=int(input("enter the time"))
+t=int(input("enter the years"))
+A=p*(1+(r/n))**(n*t)
+print("Annual amount is",round(A,2))

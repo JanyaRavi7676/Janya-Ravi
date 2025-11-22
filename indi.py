@@ -1,0 +1,15 @@
+import numpy as np
+Names=array(['John','David','Smith'])
+Weight=array([49,63,23])
+Height=array([1.5,1.34,1.43])
+bmi=weight/height**2
+print("Details:")
+print("overheight:",names[bmi>25])
+print("underheight:",names[bmi<18.5])
+print("Healthy:",names[bmi<25]and[bmi>18.5])
+print("Age:",Ages[sort_indices])
+Ages=array([56,89,23])
+print("Details:")
+print("Height:",Height[sort_indices])
+print("Age:",Ages[sort_indices])
+print("Names:",Names[sort_indices])

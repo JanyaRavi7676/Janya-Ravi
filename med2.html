@@ -1,0 +1,35 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedReminder{% if user.is_authenticated %} - Dashboard{% endif %}</title>
+    <!-- Add your CSS links here -->
+</head>
+<body>
+    <header>
+        <h1>MedReminder{% if user.is_authenticated %} - Welcome, {{ user.username }}{% endif %}</h1>
+    </header>
+
+    <main>
+        <!-- Messages Display -->
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <!-- Main Content -->
+        {% block content %}
+        <!-- Child templates will insert content here -->
+        {% endblock %}
+    </main>
+
+    <!-- Add your JavaScript links here -->
+</body>
+</html>

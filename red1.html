@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Sandalwood Authentication System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2f1a, #0d1c0d);
+            color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            display: flex;
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .left-panel {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            margin-right: 15px;
+            color: #c93c3c;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #e9e9e9;
+        }
+        
+        .tagline {
+            color: #b8b8b8;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .login-form {
+            width: 100%;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #c93c3c;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: #c93c3c;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #a52a2a;
+            transform: translateY(-2px);
+        }
+        
+        .form-footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .form-footer a {
+            color: #c93c3c;
+            text-decoration: none;
+        }
+        
+        .right-panel {
+            flex: 1;
+            background: url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .right-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(13, 28, 13, 0.9), rgba(13, 28, 13, 0.5));
+        }
+        
+        .message-container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .moral-message {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #c93c3c;
+        }
+        
+        .moral-message h3 {
+            margin-bottom: 10px;
+            color: #e9e9e9;
+        }
+        
+        .moral-message p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .right-panel {
+                min-height: 300px;
+            }
+        }
+        
+        .fingerprint-option {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .fingerprint-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .fingerprint-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .fingerprint-icon {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <div>
+                    <h1>Red Sandalwood</h1>
+                    <div class="tagline">Authentication System</div>
+                </div>
+            </div>
+            
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i> Username</label>
+                    <input type="text" id="username" placeholder="Enter your username">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                
+                <button type="submit" class="btn">Login to System</button>
+                
+                <div class="fingerprint-option">
+                    <div class="fingerprint-btn">
+                        <i class="fas fa-fingerprint fingerprint-icon"></i>
+                        <span>Login with Fingerprint</span>
+                    </div>
+                </div>
+                
+                <div class="form-footer">
+                    <p>Protected by Forest Department | <a href="#">Forgot Password?</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <div class="right-panel">
+            <div class="message-container">
+                <div class="moral-message">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Stop Illegal Logging</h3>
+                    <p>Every red sandalwood tree cut illegally is a loss to our ecosystem and future generations.</p>
+                </div>
+                
+                <div class="moral-message">
+                    <h3><i class="fas fa-seedling"></i> Protect Our Heritage</h3>
+                    <p>Red sandalwood trees are a natural heritage that takes decades to mature. Let's preserve them for our children.</p>
+                </div>
+                
+                <div class="moral-message">
+                    <h3><i class="fas fa-hand-holding-heart"></i> Sustainable Harvesting</h3>
+                    <p>Only authorized harvesting with proper permits ensures the survival of these precious trees.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.querySelector('.login-form');
+            const fingerprintBtn = document.querySelector('.fingerprint-btn');
+            
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Authentication system would verify credentials here.');
+            });
+            
+            fingerprintBtn.addEventListener('click', function() {
+                alert('Fingerprint scanner would activate here for biometric authentication.');
+            });
+        });
+    </script>
+</body>
+</html>

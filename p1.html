@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kung Fu Panda - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .panda-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .header-text {
+            flex: 1;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #222;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: #222;
+            font-weight: 600;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #4a7c59;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #3a6548;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+        
+        .project {
+            margin-bottom: 25px;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .project-description {
+            color: #555;
+            margin-left: 15px;
+        }
+        
+        .contact-info {
+            margin-top: 10px;
+        }
+        
+        .contact-item {
+            margin-bottom: 8px;
+        }
+        
+        .social-links {
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: #4a7c59;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+        
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            background: #e9f0eb;
+            color: #4a7c59;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Kung Fu Panda" class="panda-image">
+            <div class="header-text">
+                <h1>Kung Fu Panda</h1>
+                <p class="subtitle">Hi, I'm Po</p>
+                <p class="subtitle">A Dragon Warrior, Graduated at Jade Palace under Master Shifu</p>
+                <a href="#projects" class="btn">View the works</a>
+            </div>
+        </div>
+    </header>
+    
+    <hr>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <div class="project">
+            <div class="project-title">Company Management System</div>
+            <div class="project-description">
+                <p>Used Django for tracking and HTML, CSS and JS For front end</p>
+                <div>
+                    <span class="tech-badge">Django</span>
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Skin Cancer Protection</div>
+            <div class="project-description">
+                <p>Used Extract Space for UI</p>
+                <div>
+                    <span class="tech-badge">Extract Space</span>
+                    <span class="tech-badge">UI Design</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Food Delivery App</div>
+            <div class="project-description">
+                <p>Used Swift for App development for iOS Devices</p>
+                <div>
+                    <span class="tech-badge">Swift</span>
+                    <span class="tech-badge">iOS</span>
+                    <span class="tech-badge">Mobile Development</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>Email:</strong> panda@kungfu.panda.com
+            </div>
+            <div class="contact-item">
+                <strong>LinkedIn:</strong> <a href="#">Click here for linked</a>
+            </div>
+            <div class="contact-item">
+                <strong>Instagram:</strong> <a href="#">India Profile</a>
+            </div>
+            <div class="contact-item">
+                <strong>Kung Fu Photos:</strong> <a href="#">View Gallery</a>
+            </div>
+        </div>
+        
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+    </section>
+    
+    <footer style="margin-top: 50px; text-align: center; color: #777; font-size: 0.9rem;">
+        <p>&copy; 2023 Kung Fu Panda. All rights reserved.</p>
+    </footer>
+</body>
+</html>
