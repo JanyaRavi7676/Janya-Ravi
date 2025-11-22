@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Voting System</title>
+    <title>Voting System</title>
     <link rel="stylesheet" href="vote.css">
 </head>
 <body>
-    <input type="text" id="Name" placeholder="Enter your name">
-    <input type="number" id="age" placeholder="Enter age">
-    <button>Submit</button>
-    <script>vote()</script>
-    <p id="result"></p>
+    <div class="container">
+        <h1>Voting Eligibility Check</h1>
+        <form id="votingForm">
+            <input type="text" id="Name" placeholder="Enter your name" required>
+            <input type="number" id="age" placeholder="Enter age" required min="1" max="120">
+            <button type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+        <p id="result"></p>
+    </div>
     <script src="vote.js"></script>
 </body>
 </html>
